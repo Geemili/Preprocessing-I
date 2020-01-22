@@ -1,7 +1,15 @@
 /* Variables */
 
+@main-bg-color: white;
+@highlight-bg-color: mediumspringgreen;
+@secondary-bg-color: darkseagreen;
 @link-color: black;
 @link-hover-color: darkorange;
+
+
+@content-padding: 5%;
+
+// font-family: 'Ubuntu', sans-serif;
 
 /* Mixins */
 
@@ -26,6 +34,7 @@ html {
 html,
 body {
     height: 100%;
+    background-color: @main-bg-color;
 }
 
 
@@ -64,6 +73,7 @@ nav {
 
 header {
     display: flex;
+    background-color: @highlight-bg-color;
 
     * {
         width: 50%;
@@ -76,3 +86,21 @@ header {
     }
 }
 
+/* Style intro section */
+
+#intro {
+    padding: @content-padding;
+    background-color: @secondary-bg-color;
+}
+
+/* Style skills and work history */
+
+#hard-facts {
+    display: flex;
+    justify-content: space-between;
+    padding: @content-padding;
+
+    .item {
+        width: 49%;
+    }
+}

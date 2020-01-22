@@ -11,6 +11,7 @@ html {
 html,
 body {
   height: 100%;
+  background-color: white;
 }
 /* Style page wrapper */
 .wrapper {
@@ -39,6 +40,7 @@ nav a:hover {
 /* Style header */
 header {
   display: flex;
+  background-color: mediumspringgreen;
 }
 header * {
   width: 50%;
@@ -49,4 +51,18 @@ header div {
   align-items: center;
   text-align: center;
   flex-direction: column;
+}
+/* Style intro section */
+#intro {
+  padding: 5%;
+  background-color: darkseagreen;
+}
+/* Style skills and work history */
+#hard-facts {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+}
+#hard-facts .item {
+  width: 49%;
 }
