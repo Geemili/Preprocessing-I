@@ -19,6 +19,11 @@
     align-items: center;
 }
 
+.bookend() {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Set every element's box-sizing to border-box */
 
 * {
@@ -97,8 +102,7 @@ header {
 /* Style skills and work history */
 
 #hard-facts {
-    display: flex;
-    justify-content: space-between;
+    .bookend();
     padding: @content-padding;
 
     .item {
@@ -112,16 +116,16 @@ header {
     padding: @content-padding;
 
     form {
-        display: flex;
+        .bookend();
         flex-wrap: wrap;
-        justify-content: space-between;
 
         label {
             padding-right: 4%;
         }
     }
 
-    #email-div, #name-div {
+    #email-div,
+    #name-div {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -150,4 +154,3 @@ header {
 footer {
     .center-contents();
 }
-
