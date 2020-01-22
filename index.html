@@ -75,14 +75,20 @@
         <section id="contact">
             <h2>Contact</h2>
             <form id="contact-form">
-                <label for="email">Email</label>
-                <input id="email" type="text" />
+                <div id="email-div">
+                    <label for="email">Email</label>
+                    <input name="email" type="text" />
+                </div>
 
-                <label for="name">Name</label>
-                <input id="name" type="text" />
+                <div id="name-div">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" />
+                </div>
 
-                <label for="message">Message</label>
-                <textarea id="message"> </textarea>
+                <div id="message-div">
+                    <label id="for-mesage" for="message">Message</label>
+                    <textarea name="message"> </textarea>
+                </div>
 
                 <input id="submit" type="submit" value="Send" />
             </form>
