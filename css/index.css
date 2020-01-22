@@ -53,12 +53,22 @@ header {
 header * {
   width: 50%;
 }
+@media (max-width: 500px) {
+  header * {
+    width: 100%;
+  }
+}
 header div {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
 }
 /* Style intro section */
 #intro {
