@@ -27,6 +27,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  /* Style for mobile */
 }
 nav * {
   padding: 2%;
@@ -37,6 +38,12 @@ nav a {
 }
 nav a:hover {
   color: darkorange;
+}
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    height: 100%;
+  }
 }
 /* Style header */
 header {
