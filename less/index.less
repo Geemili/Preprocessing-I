@@ -3,6 +3,14 @@
 @link-color: black;
 @link-hover-color: darkorange;
 
+/* Mixins */
+
+.center-contents() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Set every element's box-sizing to border-box */
 
 * {
@@ -51,3 +59,20 @@ nav {
         }
     }
 }
+
+/* Style header */
+
+header {
+    display: flex;
+
+    * {
+        width: 50%;
+    }
+
+    div {
+        .center-contents();
+        text-align: center;
+        flex-direction: column;
+    }
+}
+

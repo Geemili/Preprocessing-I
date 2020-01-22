@@ -1,4 +1,5 @@
 /* Variables */
+/* Mixins */
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -34,4 +35,18 @@ nav a {
 }
 nav a:hover {
   color: darkorange;
+}
+/* Style header */
+header {
+  display: flex;
+}
+header * {
+  width: 50%;
+}
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
