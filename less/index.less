@@ -1,3 +1,8 @@
+/* Variables */
+
+@link-color: black;
+@link-hover-color: darkorange;
+
 /* Set every element's box-sizing to border-box */
 
 * {
@@ -14,6 +19,7 @@ html,
 body {
     height: 100%;
 }
+
 
 /* Style page wrapper */
 
@@ -37,11 +43,11 @@ nav {
     }
 
     a {
-        color: black;
+        color: @link-color;
         text-decoration: none;
 
         &:hover {
-            color: darkorange;
+            color: @link-hover-color;
         }
     }
 }
