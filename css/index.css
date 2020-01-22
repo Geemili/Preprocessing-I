@@ -2,7 +2,16 @@
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   height: 100%;
+}
+/* Style page wrapper */
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 1.6rem;
 }
