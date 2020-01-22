@@ -84,6 +84,16 @@ header div {
 #hard-facts .item {
   width: 49%;
 }
+@media (max-width: 500px) {
+  #hard-facts .item {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  #hard-facts {
+    flex-direction: column;
+  }
+}
 /* Style contact section */
 #contact {
   padding: 5%;

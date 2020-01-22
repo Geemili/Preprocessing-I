@@ -125,6 +125,14 @@ header {
 
     .item {
         width: 49%;
+
+        @media (max-width: @mobile-break) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: @mobile-break) {
+        flex-direction: column;
     }
 }
 
