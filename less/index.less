@@ -1,59 +1,190 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* Variables */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+@main-bg-color: white;
+@highlight-bg-color: mediumspringgreen;
+@secondary-bg-color: darkseagreen;
+@link-color: black;
+@link-hover-color: darkorange;
+
+
+@content-padding: 5%;
+
+
+@mobile-break: 500px;
+
+// font-family: 'Ubuntu', sans-serif;
+
+/* Mixins */
+
+.center-contents() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+.bookend() {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Set every element's box-sizing to border-box */
+
 * {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
-html, body {
+html {
+    // Make default rem == 10px
+    font-size: 62.5%;
+}
+
+html,
+body {
     height: 100%;
+    background-color: @main-bg-color;
 }
 
+
+/* Style page wrapper */
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    margin-bottom: 5%;
+}
+
+/* Style navbar */
+
+nav {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    * {
+        padding: 2%;
+    }
+
+    a {
+        color: @link-color;
+        text-decoration: none;
+
+        &:hover {
+            color: @link-hover-color;
+        }
+    }
+
+    /* Style for mobile */
+
+    @media (max-width: @mobile-break) {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+/* Style header */
+
+header {
+    display: flex;
+    background-color: @highlight-bg-color;
+
+    * {
+        width: 50%;
+
+        @media (max-width: @mobile-break) {
+            width: 100%;
+        }
+    }
+
+    div {
+        .center-contents();
+        text-align: center;
+        flex-direction: column;
+    }
+
+    @media (max-width: @mobile-break) {
+        flex-direction: column;
+    }
+}
+
+/* Style intro section */
+
+#intro {
+    padding: @content-padding;
+    background-color: @secondary-bg-color;
+}
+
+/* Style skills and work history */
+
+#hard-facts {
+    .bookend();
+    padding: @content-padding;
+
+    .item {
+        width: 49%;
+
+        @media (max-width: @mobile-break) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: @mobile-break) {
+        flex-direction: column;
+    }
+}
+
+/* Style contact section */
+
+#contact {
+    padding: @content-padding;
+
+    form {
+        .bookend();
+        flex-wrap: wrap;
+
+        label {
+            padding-right: 4%;
+        }
+
+        @media (max-width: @mobile-break) {
+            flex-direction: column;
+        }
+    }
+
+    #email-div,
+    #name-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 50%;
+        padding: 0 2%;
+
+        @media (max-width: @mobile-break) {
+            width: 100%;
+        }
+    }
+
+    input {
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    #message-div {
+        width: 100%;
+        padding: 0 2%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}
+
+/* Style footer */
+
+footer {
+    .center-contents();
+}

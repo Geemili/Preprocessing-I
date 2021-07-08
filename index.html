@@ -1,19 +1,104 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>My Resume</title>
+    <title>LeRoyce Pearson</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
 
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+
+    <div class="wrapper">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#intro">Intro</a>
+            <a href="#skills">Skills</a>
+            <a href="#work-history">Work History</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <header>
+            <img src="images/header.jpg" />
+            <div>
+                <h1>LeRoyce Pearson</h1>
+                <p>Full Stack Web Developer</p>
+            </div>
+        </header>
+
+        <section id="intro">
+            <h2>Intro</h2>
+            <p>As software enthusiast first and a programmer second, I understand that getting it right is important. Crappy software can ruin productivity and kill motivation, and I want to ensure that never happens.</p>
+        </section>
+
+        <div id="hard-facts">
+            <section id="skills" class="item">
+                <h2>Skills</h2>
+                <p>On top of the usual trio of web development languages, I know Rust and Python.</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Rust</li>
+                    <li>Python</li>
+                    <li>Commandline</li>
+                </ul>
+            </section>
+
+            <section id="work-history" class="item">
+                <h2>Work History</h2>
+                <div class="work-experience">
+                    <h3>Knowles</h3>
+                    <p>Reliability Technician</p>
+                    <p>Jul 2017 - Dec 2019</p>
+                    <p>I did stuff that was useful.</p>
+                </div>
+                <div class="work-experience">
+                    <h3>Depthsight Innovations</h3>
+                    <p>Programmer</p>
+                    <p>Jul 2017 - Dec 2018</p>
+                    <p>I made a cool test system.</p>
+                </div>
+            </section>
+        </div>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <div id="email-div">
+                    <label for="email">Email</label>
+                    <input name="email" type="text" />
+                </div>
+
+                <div id="name-div">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" />
+                </div>
+
+                <div id="message-div">
+                    <label id="for-mesage" for="message">Message</label>
+                    <textarea name="message"> </textarea>
+                </div>
+
+                <input id="submit" type="submit" value="Send" />
+            </form>
+        </section>
+
+        <footer>
+            <small>&copy; 2020 LeRoyce Pearson</small>
+        </footer>
+
+    </div>
 </body>
+
 </html>
